@@ -1,6 +1,10 @@
 pipeline {
-  agent { label 'jenkinslave' }
+  agent {
+    node {
+      label 'jenkinslave'
+    }
 
+  }
   stages {
     stage('Fetch dependencies') {
       steps {
