@@ -1,10 +1,6 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Jenkinsfile'
-    }
+  agent { label 'jenkinslave' }
 
-  }
   stages {
     stage('Fetch dependencies') {
       steps {
